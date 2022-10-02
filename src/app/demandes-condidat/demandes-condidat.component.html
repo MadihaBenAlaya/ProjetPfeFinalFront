@@ -1,0 +1,27 @@
+
+    <div class="demandeCandidatWrapper">
+      <app-header></app-header>
+      <span class="titel">DEMANDES DE CANDIDATURE</span>
+      <div class="tabel-conatiner">
+        <table>
+          <th>ID Candidature</th>
+          <th>Date d'envoi</th>
+          <th>Poste</th>
+          <th>Département</th>
+          <th>Statut</th>
+
+          <tr *ngFor="let c of candidatures">
+            <td>{{c.candidatureID}}</td>
+            <td>{{c.date_postulation|date:'dd/MM/yyyy'}}</td>
+            <td>{{c.correspondance.nomOffre}}</td>
+            <td>{{c.correspondance.departement}}</td>
+
+            <td><span class="statue">{{c.etat}}</span></td>
+
+          </tr>
+        </table>
+      </div>
+      <app-footer></app-footer>
+    </div>
+
+

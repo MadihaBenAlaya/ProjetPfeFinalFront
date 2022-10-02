@@ -1,0 +1,125 @@
+<div class="espaceCandidatWrapper">
+  <div class="master-container">
+
+    <div class="titel-container">
+      <h3>Planifier un entretien RH</h3>
+
+    </div>
+    <div class="row g-0 text-center">
+
+        <mat-card>
+          <div>
+
+            <form [formGroup]="service.formModel" autocomplete="off" (submit)="onSubmit(candidature.candidat.email,candidature.candidat.fullName)">
+              <div class="container">
+                <div class="row g-2">
+
+                  <div class="col-6">
+                    <label for="inputAddress2" class="form-label">Equipe de recrutement</label>
+                    <select id="inputState" class="form-select" formControlName="equipe_recrutement">
+
+                      <option value="" disabled selected style="display: none">
+                        Equipe de recrutement
+                      </option>
+
+                      <option>Esmahene Marzouki</option>
+
+                    </select>
+
+                  </div>
+                  <div class="col-6">
+                    <label for="inputAddress2" class="form-label">Date *</label>
+                    <input type="date" class="form-control" placeholder="Date de dépot" formControlName="date" />
+
+                    <label class="text-danger"
+                      *ngIf="service.formModel.get('date').touched && service.formModel.get('date').errors?.required">
+                      Ce champ est obligatoire.</label>
+                  </div>
+                  <div class="col-6">
+                    <label for="inputAddress2" class="form-label">Heure *</label>
+                    <input type="time" class="form-control" placeholder="Heure" formControlName="heure" />
+                    <label class="text-danger"
+                      *ngIf="service.formModel.get('heure').touched && service.formModel.get('heure').errors?.required">
+                      Ce champ est obligatoire.</label>
+                  </div>
+
+
+
+
+                  <div class="col-6">
+                    <label for="inputAddress2" class="form-label">Type de l'entretien</label>
+                    <select id="inputState" class="form-select" formControlName="type_entretien">
+
+                      <option value="" disabled selected style="display: none">
+                        Type de l'entretien
+                      </option>
+
+                      <option>En ligne</option>
+                      <option>Présentiel</option>
+
+                    </select>
+
+                  </div>
+                  <div class="col-6">
+                    <label for="inputAddress2" class="form-label">Durée *</label>
+                    <select id="inputState" class="form-select" formControlName="duree">
+
+                      <option value="" disabled selected style="display: none">
+                        Durée
+                      </option>
+
+                      <option>15 min</option>
+                      <option>20 min</option>
+                      <option>30 min</option>
+                      <option>40 min</option>
+
+                    </select>
+                    <label class="text-danger"
+                      *ngIf="service.formModel.get('duree').touched && service.formModel.get('duree').errors?.required">
+                      Ce champ est obligatoire.</label>
+                  </div>
+                  <div class="col-6">
+                    <label for="inputAddress2" class="form-label">Localisation</label>
+
+                    <select id="inputState" class="form-select" formControlName="localisation">
+
+                      <option value="" disabled selected style="display: none">
+                        Localisation
+                      </option>
+
+                      <option>https://www.google.com/maps/place/ADDINN+TUNISIE/@36.8488155,10.1990491,15z/data=!4m5!3m4!1s0x0:0x7820b798ea28fbe9!8m2!3d36.8488155!4d10.1990491</option>
+
+                    </select>
+
+
+                  </div>
+                  <div class="col-12">
+                    <label for="inputAddress2" class="form-label">Lien de l'entretien</label>
+                    <input type="text" class="form-control" formControlName="Lien de l'entretien" />
+
+                  </div>
+
+
+                </div>
+              </div>
+
+              <br>
+
+              <button mat-raised-button color="primary" >Valider</button>
+              <button mat-raised-button mat-dialog-close>Annuler</button>
+
+
+
+
+            </form>
+          </div>
+        </mat-card>
+
+
+    </div>
+
+
+  </div>
+
+</div>
+

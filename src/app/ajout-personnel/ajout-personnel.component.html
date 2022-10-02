@@ -1,0 +1,97 @@
+<div class="espaceCandidatWrapper">
+  <div class="master-container">
+    <div class="titel-container">
+      <h3>Ajouter un personnel</h3>
+    </div>
+
+    <div class="forms-container row">
+
+
+      <form class="row g-3" [formGroup]="service.formModel" autocomplete="off" (submit)="onSubmit()">
+        <div class="col-md-6">
+          <label for="inputEmail4" class="form-label">Nom complet *</label>
+          <input type="text" class="form-control" formControlName="fullName">
+          <label class="text-danger"
+          *ngIf="service.formModel.get('fullName').touched && service.formModel.get('fullName').errors?.required">
+          Ce champ est obligatoire.</label>
+        </div>
+
+        <div class="col-md-6">
+          <label for="inputEmail4" class="form-label">Adresse email *</label>
+
+          <input type="email" class="form-control" formControlName="email">
+          <label class="text-danger"
+          *ngIf="service.formModel.get('email').touched && service.formModel.get('email').errors?.required">
+          Ce champ est obligatoire.</label>
+          <label class="text-danger"
+                  *ngIf="service.formModel.get('email').touched && service.formModel.get('email').errors?.email">
+                  Adresse email invalide.</label>
+        </div>
+
+        <div class="col-md-6">
+          <label for="inputCity" class="form-label">Date de naissance</label>
+          <input type="date" class="form-control" formControlName="date_naissance" />
+
+        </div>
+
+        <div class="col-3">
+          <label for="inputAddress2" class="form-label">Pays</label>
+          <input type="text" class="form-control" formControlName="pays">
+
+        </div>
+        <div class="col-3">
+          <label for="inputAddress2" class="form-label">Ville</label>
+          <input type="text" class="form-control" formControlName="ville">
+        </div>
+
+        <div class="col-3">
+          <label for="inputAddress2" class="form-label">Specialité</label>
+          <input type="text" class="form-control" formControlName="specialite">
+        </div>
+
+        <div class="col-md-3">
+          <label for="inputState" class="form-label">Diplome</label>
+          <select id="inputState" class="form-select" formControlName="diplome">
+            <option value="" disabled selected style="display: none">
+              Diplome
+            </option>
+            <option>Ingénieur</option>
+            <option>Technicien</option>
+          </select>
+        </div>
+
+        <div class="col-md-3">
+          <label for="inputEmail4" class="form-label">Nombre d'années d'expérience</label>
+          <input type="number" class="form-control"  formControlName="nb_annees_experience">
+        </div>
+
+
+        <div class="col-md-3">
+          <label for="inputState" class="form-label">Département *</label>
+          <select id="inputState" class="form-select" formControlName="departement">
+            <option value="Departement" disabled selected style="display: none">
+              Département
+            </option>
+            <option [value]="departement.departementID" *ngFor="let departement of departments">{{departement.libelle}}</option>
+
+          </select>
+          <label class="text-danger"
+          *ngIf="service.formModel.get('departement').touched && service.formModel.get('departement').errors?.required">
+          Ce champ est obligatoire.</label>
+        </div>
+
+
+        <div class="buttons-container">
+          <button type="submit" class="btn btn-primary next" [disabled]="!service.formModel.valid" mat-dialog-close>Enregistrer</button>
+          <button class="btn btn-primary cancel" mat-dialog-close>Annuler</button>
+        </div>
+
+
+      </form>
+
+    </div>
+
+  </div>
+
+
+</div>

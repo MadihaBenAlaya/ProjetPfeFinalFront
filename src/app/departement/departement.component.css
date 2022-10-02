@@ -1,0 +1,22 @@
+table {
+    Height : 100%,
+  }
+
+  mat-form-field{
+    width: 200px;
+    color: black;
+    font-size: 20px;
+  }
+  .mat-cell {
+    color: black;
+  }
+
+
+  .content ::ng-deep {
+    display: block !important;
+
+    padding: 0 16px !important;
+    width: 1260px;
+    flex-direction: column !important;
+    align-items: center !important;
+  }

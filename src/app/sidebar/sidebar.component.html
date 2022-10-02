@@ -1,0 +1,75 @@
+<mat-toolbar color="primary">
+  <button mat-button (click)="drawer.toggle()">
+      <mat-icon>menu</mat-icon>
+  </button>
+
+  <form class="d-flex" role="search">
+    <input class="form-control me-2" type="search" placeholder="Recherche" aria-label="Search">
+    <button class="btn btn-outline-success" type="submit">Rechercher</button>
+  </form>
+
+
+</mat-toolbar>
+
+<mat-sidenav-container fxLayout="column">
+  <mat-sidenav class="mat-elevation-z8" #drawer mode="side" opened>
+      <mat-divider></mat-divider>
+
+      <button [routerLink]="['/Dashboard']" mat-button class="menu-button">
+        <mat-icon>home</mat-icon>
+        <span>Dashboard</span>
+    </button>
+      <button [routerLink]="['/ProfileRecruteur']" mat-button class="menu-button">
+        <mat-icon>account_circle</mat-icon>
+        <span>Profil</span>
+    </button>
+      <button [routerLink]="['/Offres']" mat-button class="menu-button">
+          <mat-icon>local_offer</mat-icon>
+          <span>Offres</span>
+      </button>
+      <button *ngIf="service.roleMatch(['ADMINISTRATEUR'])" [routerLink]="['/Departements']" mat-button class="menu-button">
+      <mat-icon>border_color</mat-icon>
+        <span>Departements</span>
+    </button>
+      <button *ngIf="service.roleMatch(['ADMINISTRATEUR'])" [routerLink]="['/Personnels']" mat-button class="menu-button">
+        <mat-icon>group icon</mat-icon>
+        <span>Personnels</span>
+    </button>
+    <button *ngIf="service.roleMatch(['ADMINISTRATEUR'])" [routerLink]="['/Recruteurs']" mat-button class="menu-button">
+      <mat-icon>group icon</mat-icon>
+      <span>Recruteurs</span>
+  </button>
+      <button [routerLink]="['/Candidatures']" mat-button class="menu-button">
+          <mat-icon>storage</mat-icon>
+          <span>Candidatures</span>
+      </button>
+      <button [routerLink]="['/TestTechniques']" mat-button class="menu-button">
+          <mat-icon>event</mat-icon>
+          <span>Tests Techniques</span>
+      </button>
+      <button [routerLink]="['/EntretienRHs']" mat-button class="menu-button">
+        <mat-icon>insert_invitation</mat-icon>
+        <span>Entretiens RH</span>
+    </button>
+
+      <mat-divider></mat-divider>
+
+      <button mat-button class="menu-button" (click)="SeDeconnecter()">
+        <mat-icon>lock</mat-icon>
+        <span>Déconnexion</span>
+      </button>
+
+  </mat-sidenav>
+  <mat-sidenav-content>
+      <div >
+        <div class="row">
+          <div class="col-md-1"></div>
+          <div class="col-md-11" align="center">
+
+            <router-outlet></router-outlet>
+          </div>
+        </div>
+
+      </div>
+  </mat-sidenav-content>
+</mat-sidenav-container>

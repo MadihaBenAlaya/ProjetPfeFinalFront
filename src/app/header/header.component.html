@@ -1,0 +1,25 @@
+<nav>
+  <div class="navbar">
+    <div class="logo">
+      <img src="../assets/images/AddInnLogo.svg" alt="AddInn Logo" />
+    </div>
+    <div class="menu-list">
+      <ul>
+        <li><a routerLink="Login"> Qui Sommes Nous ?</a></li>
+        <li><a href="#" routerLink="/NosOffres">Nos Offres</a></li>
+        <li *ngIf="test==true"><a routerLink="/DemandesCondidat">Mes candidatures</a></li>
+        <li><a href="#">Secteurs d'activité</a></li>
+        <li><a href="#">Blog</a></li>
+        <li><a href="#">Nous Rejoindre</a></li>
+      </ul>
+    </div>
+    <div class="login-button">
+      <div *ngIf="!userDetails">
+        <button routerLink="/Login">S'identifier</button>
+      </div>
+      <div *ngIf="userDetails">
+        <button (click)="SeDeconnecter()" >Se déconnecter</button>
+      </div>
+    </div>
+  </div>
+</nav>

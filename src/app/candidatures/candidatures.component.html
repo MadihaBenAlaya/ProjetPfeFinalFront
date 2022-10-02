@@ -1,0 +1,154 @@
+
+<div class="demandeCandidatWrapper">
+<br>
+  <span class="titel">Liste des candiatures</span>
+  <br>
+  <br>
+  <div class="row g-0 text-center">
+    <div class="col-sm-6 col-md-4">
+
+
+
+
+      <div class="content">
+        <div class="mat-elevation-z8">
+
+          <div align="left">
+          <mat-form-field>
+            <mat-label>Filter</mat-label>
+            <input matInput placeholder="Filter" (keyup)="Filterchange($event)">
+
+          </mat-form-field>
+        </div>
+          <table mat-table matSort [dataSource]="dataSource">
+
+            <!--- Note that these columns can be defined in any order.
+              The actual rendered columns are set as a property on the row definition" -->
+
+            <!-- Position Column -->
+            <ng-container matColumnDef="nomOffre">
+              <th mat-header-cell mat-sort-header *matHeaderCellDef class="fs-6"> Poste </th>
+              <td mat-cell *matCellDef="let element"> {{element.correspondance.nomOffre}} </td>
+            </ng-container>
+
+            <!-- Name Column -->
+            <ng-container matColumnDef="fullName">
+              <th mat-header-cell mat-sort-header *matHeaderCellDef class="fs-6"> Candidat </th>
+              <td mat-cell *matCellDef="let element"> {{element.candidat.fullName}} </td>
+            </ng-container>
+
+            <!-- Weight Column -->
+
+
+            <!-- Symbol Column -->
+            <ng-container matColumnDef="date_postulation">
+              <th mat-header-cell mat-sort-header *matHeaderCellDef class="fs-6"> Date</th>
+              <td mat-cell *matCellDef="let element"> {{element.date_postulation|date:'dd/MM/yyyy'}} </td>
+            </ng-container>
+
+            <!-- Symbol Column -->
+            <ng-container matColumnDef="curriculum_Vitae">
+              <th mat-header-cell mat-sort-header *matHeaderCellDef class="fs-6"> Curriculum Vitae</th>
+              <td mat-cell *matCellDef="let element">
+                <app-download [fileUrl]="element.curriculum_Vitae"></app-download>
+              </td>
+            </ng-container>
+
+            <!-- Symbol Column -->
+            <ng-container matColumnDef="score">
+              <th mat-header-cell mat-sort-header *matHeaderCellDef class="fs-6"> Score </th>
+              <td mat-cell *matCellDef="let element"> {{element.score}} </td>
+            </ng-container>
+
+            <ng-container matColumnDef="action">
+              <th mat-header-cell mat-sort-header *matHeaderCellDef class="fs-6"> Modifier l'état </th>
+              <td mat-cell *matCellDef="let element">
+                <div class="btn-group">
+                  <button type="button" mat-raised-button color="primary" class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+                    Action
+                  </button>
+                  <ul class="dropdown-menu">
+
+                    <li>
+                      <a (click)="encours(element.candidat.email,element.candidat.fullName,element.candidatureID,element.date_postulation,element.curriculum_Vitae,element.score,element.nb_annee_exp_candidat,element.correspondance.offreID,element.candidat.id)" class="dropdown-item" >En cours</a>
+                    </li>
+                    <li>
+                      <a (click)="accepter(element.candidat.email,element.candidat.fullName,element.candidatureID,element.date_postulation,element.curriculum_Vitae,element.score,element.nb_annee_exp_candidat,element.correspondance.offreID,element.candidat.id)"  class="dropdown-item">Accepter</a>
+                    </li>
+                    <li>
+                      <a (click)="refuser(element.candidat.email,element.candidat.fullName,element.candidatureID,element.date_postulation,element.curriculum_Vitae,element.score,element.nb_annee_exp_candidat,element.correspondance.offreID,element.candidat.id)" class="dropdown-item" >Refuser</a>
+                    </li>
+                  </ul>
+                </div>
+              </td>
+            </ng-container>
+
+
+            <ng-container matColumnDef="etat">
+              <th mat-header-cell mat-sort-header *matHeaderCellDef class="fs-6"> Etat </th>
+              <td mat-cell *matCellDef="let element"> {{element.etat}} </td>
+            </ng-container>
+
+            <ng-container matColumnDef="planification">
+              <th mat-header-cell mat-sort-header *matHeaderCellDef class="fs-6"> Planification </th>
+              <td mat-cell *matCellDef="let element">
+                <div class="btn-group">
+                  <button type="button" mat-raised-button color="primary" class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+                  Planifier
+                  </button>
+                  <ul class="dropdown-menu">
+
+                    <li>
+                      <a (click)="openEntretienDetails(element.candidatureID)" class="dropdown-item"> Entretien RH</a>
+                    </li>
+                    <li>
+                      <a (click)="openTestDetails(element.candidatureID)" class="dropdown-item"> Test Technique</a>
+                    </li>
+                  </ul>
+                </div>
+              </td>
+            </ng-container>
+
+
+            <ng-container matColumnDef="action1">
+              <th mat-header-cell mat-sort-header *matHeaderCellDef class="fs-6"> Détails </th>
+              <td mat-cell *matCellDef="let element"> <button mat-raised-button (click)="openCandidatureDetails(element.candidatureID)">Détails</button> </td>
+            </ng-container>
+
+            <ng-container matColumnDef="action2">
+              <th mat-header-cell mat-sort-header *matHeaderCellDef class="fs-6">   </th>
+              <td mat-cell *matCellDef="let element">
+
+                <button mat-mini-fab color="warn" aria-label="Example icon button with a menu icon" (click)="openConfirm(element.candidatureID)">
+                  <mat-icon>delete</mat-icon>
+                </button>
+              </td>
+            </ng-container>
+            <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+            <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+          </table>
+        </div>
+        <mat-paginator [pageSizeOptions]="[5,10,20]" showFirstLastButtons>
+
+        </mat-paginator>
+      </div>
+    </div>
+  </div>
+
+
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+

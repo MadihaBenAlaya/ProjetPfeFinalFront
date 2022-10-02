@@ -1,0 +1,68 @@
+
+
+<mat-card class="example-card" *ngIf="candidatureDetails">
+  <mat-card-title>Détails Candidature</mat-card-title>
+  <h2></h2>
+
+  <mat-card-content>
+    <div class="row">
+      <div class="col-4">
+        <h1>Candidature</h1>
+        <h2>Date de candidature :</h2>
+        <p>{{candidatureDetails.date_postulation}}</p>
+
+        <h2>Score candidat :</h2>
+        <p>{{candidatureDetails.score}}</p>
+
+        <h2>Nombre d'années d'expérience candidat :</h2>
+        <p>{{candidatureDetails.nb_annee_exp_candidat}}</p>
+
+      </div>
+      <div class="col-4">
+        <h1>Description de l'offre</h1>
+        <h2>Nom de l'offre:</h2>
+        <p>{{candidatureDetails.correspondance.nomOffre}}</p>
+        <h2>Departement:</h2>
+        <p>{{candidatureDetails.correspondance.departement}}</p>
+        <h2>Compétences Techniques démandées :</h2>
+        <p>{{candidatureDetails.correspondance.competences_techniques}}</p>
+        <h2>Expérience démandée :</h2>
+        <p>{{candidatureDetails.correspondance.experience_demandee}}</p>
+        <h2>Diplome démandé :</h2>
+        <p>{{candidatureDetails.correspondance.diplome_demande}}</p>
+        <h2>Qualités interpersonnelles démandées :</h2>
+        <p>{{candidatureDetails.correspondance.qualites_interpersonnelles}}</p>
+        <p></p>
+      </div>
+
+      <div class="col-4">
+
+        <h1>Profil du candidat</h1>
+
+
+        <h2>Nom complet :</h2>
+        <p>
+          {{candidatureDetails.candidat.fullName}}
+        </p>
+        <h2>Adresse email :</h2>
+        <p>
+          {{candidatureDetails.candidat.email}}
+        </p>
+        <h2>Date de naissance :</h2>
+        <p>
+          {{candidatureDetails.candidat.date_naissance}}
+        </p>
+        <h2>Diplome :</h2>
+        <p>
+          {{candidatureDetails.candidat.diplome}}
+        </p>
+        <h2>Spécialité :</h2>
+        <p>
+          {{candidatureDetails.candidat.specialite}}
+        </p>
+
+      </div>
+    </div>
+  </mat-card-content>
+
+</mat-card>

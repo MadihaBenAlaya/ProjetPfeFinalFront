@@ -1,0 +1,91 @@
+
+<div class="demandeCandidatWrapper">
+
+    <span class="titel">Liste des Departements</span>
+    <br>
+    <div class="row">
+      <div class="col-10"></div>
+      <div class="col-1">
+        <button  type="button" mat-raised-button color="primary" class="btn btn-primary" (click)="openDialog()">
+        Ajouter
+      </button>
+      <br>
+      <br>
+    </div>
+    </div>
+    <div class="row g-0 text-center">
+        <div class="col-sm-6 col-md-4">
+
+
+
+
+            <div class="content">
+                <div class="mat-elevation-z8">
+
+                    <div align="left">
+                        <mat-form-field>
+                            <mat-label>Filter</mat-label>
+                            <input matInput placeholder="Filter" (keyup)="Filterchange($event)">
+
+                        </mat-form-field>
+                    </div>
+                    <table mat-table matSort [dataSource]="dataSource">
+
+                        <!--- Note that these columns can be defined in any order.
+                The actual rendered columns are set as a property on the row definition" -->
+
+                        <!-- Position Column -->
+                        <ng-container matColumnDef="code">
+                            <th mat-header-cell mat-sort-header *matHeaderCellDef class="fs-6"> Code </th>
+                            <td mat-cell *matCellDef="let element"> {{element.code}} </td>
+                        </ng-container>
+
+                        <!-- Name Column -->
+                        <ng-container matColumnDef="libelle">
+                            <th mat-header-cell mat-sort-header *matHeaderCellDef class="fs-6"> Libelle </th>
+                            <td mat-cell *matCellDef="let element"> {{element.libelle}} </td>
+                        </ng-container>
+
+
+
+
+
+                        <ng-container matColumnDef="action">
+                            <th mat-header-cell mat-sort-header *matHeaderCellDef class="fs-6"> Action </th>
+                            <td mat-cell *matCellDef="let element"> <button mat-raised-button
+                                    (click)="openDepartementDetails(element.departementID)">Voir les membres</button> </td>
+                        </ng-container>
+
+                        <ng-container matColumnDef="action1">
+                          <th mat-header-cell mat-sort-header *matHeaderCellDef class="fs-6">   </th>
+                          <td mat-cell *matCellDef="let element">
+                            <button mat-mini-fab color="basic" aria-label="Example icon button with a plus one icon" (click)="openModifierDepartement(element.departementID)">
+                              <mat-icon>edit</mat-icon>
+                            </button>
+
+
+                                <button mat-mini-fab color="warn" aria-label="Example icon button with a menu icon" (click)="openConfirm(element.departementID)">
+                                  <mat-icon>delete</mat-icon>
+                                </button>
+
+
+                          </td>
+                        </ng-container>
+
+                        <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+                        <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+                    </table>
+                </div>
+                <mat-paginator [pageSizeOptions]="[5,10,20]" showFirstLastButtons>
+
+                </mat-paginator>
+            </div>
+
+
+        </div>
+
+    </div>
+
+
+
+</div>

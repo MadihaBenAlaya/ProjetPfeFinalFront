@@ -1,0 +1,94 @@
+<div class="espaceCandidatWrapper">
+  <div class="master-container">
+    <div class="titel-container">
+      <h3>Modifier votre profile</h3>
+    </div>
+
+    <div class="forms-container row" *ngIf="userDetails">
+
+
+
+      <form class="row g-3" [formGroup]="service.formModel" autocomplete="off" (submit)="onSubmit()">
+        <div class="col-md-6">
+          <label for="inputEmail4" class="form-label">Nom utilisateur</label>
+          <input type="text" [(ngModel)]="userDetails.userName" class="form-control" formControlName="UserName">
+        </div>
+        <div formGroupName="Emails" class="col-md-6">
+          <div>
+            <label for="inputEmail4" class="form-label">Email</label>
+            <input type="email" class="form-control" [(ngModel)]="userDetails.email" formControlName="Email">
+          </div>
+        </div>
+        <div class="col-md-6">
+          <label for="inputEmail4" class="form-label">Nom complet</label>
+          <input type="text" class="form-control" [(ngModel)]="userDetails.fullName" formControlName="FullName">
+        </div>
+
+        <div class="col-md-6">
+          <label for="inputEmail4" class="form-label">Téléphone</label>
+          <input type="text" class="form-control" [(ngModel)]="userDetails.phoneNumber"
+            formControlName="PhoneNumber">
+        </div>
+
+
+        <div class="col-md-6">
+          <label for="inputCity" class="form-label">Date de naissance</label>
+          <input type="date" class="form-control" [(ngModel)]="userDetails.date_naissance"
+            formControlName="Date_naissance" />
+
+        </div>
+
+        <div class="col-md-6">
+          <label for="inputEmail4" class="form-label">Nombre d'années d'expérience</label>
+          <input type="number" class="form-control" [(ngModel)]="userDetails.nb_annees_experience"
+            formControlName="Nb_annees_experience">
+        </div>
+
+
+
+        <div class="col-3">
+          <label for="inputAddress2" class="form-label">Specialité</label>
+          <input type="text" class="form-control" [(ngModel)]="userDetails.specialite" formControlName="Specialite">
+        </div>
+
+        <div class="col-md-3">
+          <label for="inputState" class="form-label">Diplome</label>
+          <select id="inputState" class="form-select" [(ngModel)]="userDetails.diplome" formControlName="Diplome">
+            <option value="" disabled selected style="display: none">
+              Diplome
+            </option>
+            <option>Ingénieur</option>
+            <option>Technicien</option>
+          </select>
+        </div>
+
+        <div class="col-3">
+          <label for="inputAddress2" class="form-label">Pays</label>
+          <input type="text" class="form-control" [(ngModel)]="userDetails.pays" formControlName="Pays">
+
+        </div>
+        <div class="col-3">
+          <label for="inputAddress2" class="form-label">Ville</label>
+          <input type="text" class="form-control" [(ngModel)]="userDetails.ville" formControlName="Ville">
+        </div>
+
+
+
+
+
+
+
+        <div class="buttons-container">
+          <button type="submit" class="btn btn-primary next" mat-dialog-close>Enregistrer</button>
+          <button class="btn btn-primary cancel" mat-dialog-close>Annuler</button>
+        </div>
+
+
+      </form>
+
+    </div>
+
+  </div>
+
+
+</div>

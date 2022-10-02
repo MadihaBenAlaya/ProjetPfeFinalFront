@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+
+    <!-- CSS only -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor"
+      crossorigin="anonymous"
+    />
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login</title>
+  </head>
+  <body>
+    <div class="login-wrapper">
+      <app-header></app-header>
+
+      <div class="title-container"><h1>REJOIGNEZ-NOUS!</h1></div>
+      <div class="main-container">
+        <div class="main-content-container">
+          <div class="login-container">
+            <div class="login-header">
+              <span>Se Connecter</span>
+
+            </div>
+            <br>
+            <div class="login-body">
+              <form #form='ngForm' autocomplete="off" (submit)="onSubmit(form)">
+
+                  <div class="col-12 form-group">
+                  <input
+                    type="text"
+                    class="form-control"
+                    placeholder="UserName"
+                    #Username="ngModel"
+                    name="UserName"
+                    [(ngModel)]="formModel.UserName"
+                    required
+                  />
+                </div>
+
+                <br>
+
+                <div class="col-12 form-group">
+                  <input
+                    type="password"
+                    class="form-control"
+                    placeholder="Mot de Passe"
+                    #Password="ngModel"
+                    name="Password"
+                    [(ngModel)]="formModel.Password"
+                    required
+                  />
+                </div>
+
+                <br>
+                <div class="form-group" >
+                  <input
+                    type="submit"
+                    class="btn btn-primary"
+                    value="Login"
+                  />
+                </div>
+              </form>
+            </div>
+            <div class="password-forgot">
+              <a href="#">Mot de passe oublié ?</a>
+            </div>
+            <div class="remember-me">
+              <label>
+                <input type="checkbox" name="remember" id="remember" />
+                Se souvenir de moi
+              </label>
+            </div>
+
+          </div>
+
+          <div class="register-container">
+            <div class="register-header">
+              <span>CRÉER UN COMPTE</span>
+            </div>
+            <br>
+            <div class="register-body">
+              <div class="register-description">
+                <p>
+                  Vous n’êtes pas inscrits ? <br />
+                  Rejoignez nous pour accéder à nos offres d’emploi exclusives.
+                </p>
+              </div>
+              <div class="register-button-area">
+                <button class="btn btn-primary" routerLink="/Register">Inscription</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <app-footer></app-footer>
+    </div>
+
+  </body>
+</html>
+

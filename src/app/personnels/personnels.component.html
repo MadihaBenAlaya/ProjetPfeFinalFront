@@ -1,0 +1,110 @@
+
+<div class="demandeCandidatWrapper">
+    <br>
+    <br>
+    <span class="titel">Liste des personnels</span>
+    <div class="row">
+      <div class="col-10"></div>
+      <div class="col-1">
+        <button  type="button" mat-raised-button color="primary" class="btn btn-primary" (click)="openDialog()">
+        Ajouter
+      </button>
+      <br>
+      <br>
+    </div>
+    </div>
+
+
+
+    <div class="row g-0 text-center">
+      <div class="col-sm-6 col-md-4">
+
+
+
+
+        <div class="content">
+          <div class="mat-elevation-z8">
+
+            <div align="left">
+            <mat-form-field>
+              <mat-label>Filter</mat-label>
+              <input matInput placeholder="Filter" (keyup)="Filterchange($event)">
+
+            </mat-form-field>
+          </div>
+            <table mat-table matSort [dataSource]="dataSource">
+
+              <!--- Note that these columns can be defined in any order.
+                The actual rendered columns are set as a property on the row definition" -->
+
+              <!-- Position Column -->
+              <ng-container matColumnDef="fullName">
+                <th mat-header-cell mat-sort-header *matHeaderCellDef class="fs-6"> Nom complet </th>
+                <td mat-cell *matCellDef="let element"> {{element.fullName}} </td>
+              </ng-container>
+
+              <ng-container matColumnDef="email">
+                <th mat-header-cell mat-sort-header *matHeaderCellDef class="fs-6"> Adresse email </th>
+                <td mat-cell *matCellDef="let element"> {{element.email}} </td>
+              </ng-container>
+
+              <ng-container matColumnDef="date_naissance">
+                <th mat-header-cell mat-sort-header *matHeaderCellDef class="fs-6"> Date de naissance </th>
+                <td mat-cell *matCellDef="let element"> {{element.date_naissance}} </td>
+              </ng-container>
+              <!-- Name Column -->
+              <ng-container matColumnDef="pays">
+                <th mat-header-cell mat-sort-header *matHeaderCellDef class="fs-6"> Pays </th>
+                <td mat-cell *matCellDef="let element"> {{element.pays}} </td>
+              </ng-container>
+
+              <ng-container matColumnDef="diplome">
+                <th mat-header-cell mat-sort-header *matHeaderCellDef class="fs-6"> Diplome </th>
+                <td mat-cell *matCellDef="let element"> {{element.diplome}} </td>
+              </ng-container>
+
+              <!-- Symbol Column -->
+              <ng-container matColumnDef="specialite">
+                <th mat-header-cell mat-sort-header *matHeaderCellDef class="fs-6"> Specialité </th>
+                <td mat-cell *matCellDef="let element"> {{element.specialite}} </td>
+              </ng-container>
+
+
+              <!-- Symbol Column -->
+              <ng-container matColumnDef="departement">
+                <th mat-header-cell mat-sort-header *matHeaderCellDef class="fs-6"> Département </th>
+                <td mat-cell *matCellDef="let element"> {{element.departement.libelle}} </td>
+              </ng-container>
+
+              <ng-container matColumnDef="action1">
+                <th mat-header-cell mat-sort-header *matHeaderCellDef class="fs-6">   </th>
+                <td mat-cell *matCellDef="let element">
+                  <button mat-mini-fab color="basic" aria-label="Example icon button with a plus one icon" (click)="openModifierPersonnel(element.idPersonnel)">
+                    <mat-icon>edit</mat-icon>
+                  </button>
+
+
+                      <button mat-mini-fab color="warn" aria-label="Example icon button with a menu icon" (click)="openConfirm(element.idPersonnel)">
+                        <mat-icon>delete</mat-icon>
+                      </button>
+
+
+                </td>
+              </ng-container>
+              <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+              <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+            </table>
+          </div>
+          <mat-paginator [pageSizeOptions]="[5,10,20]" showFirstLastButtons>
+
+          </mat-paginator>
+        </div>
+
+
+      </div>
+
+    </div>
+
+
+
+  </div>

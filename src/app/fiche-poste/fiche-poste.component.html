@@ -1,0 +1,112 @@
+<div class="espaceCandidatWrapper" *ngIf="offreDettails">
+  <app-header></app-header>
+  <div class="master-container">
+    <div class="forms-container row">
+      <div class="titel-container">
+        <h5>FICHE DE POSTE</h5>
+      </div>
+      <div class="head-title">
+        <div class="icon-box">
+          <mat-icon>laptop_mac</mat-icon>
+        </div>
+        <div class="disc-box">
+
+          <span>{{offreDettails.nomOffre}}</span>
+        </div>
+
+      </div>
+      <h1>Description du poste</h1>
+
+      <div class="postDisc-container">
+        <div class="left-form">
+          <span> Département :</span>
+          <p>
+            {{offreDettails.departement}}
+          </p>
+        </div>
+
+        <div class="left-form">
+          <span> Type de contrat :</span>
+          <p>
+            {{offreDettails.type_contrat}}
+          </p>
+        </div>
+
+
+        <div class="left-form">
+          <span> Date de début :</span>
+          <p>
+            {{offreDettails.date_debut}}
+          </p>
+        </div>
+      </div>
+      <div class="postDisc-container">
+        <div class="left-form">
+          <span> Pays :</span>
+          <p>
+            {{offreDettails.pays}}
+          </p>
+        </div>
+
+        <div class="left-form">
+          <span> Région :</span>
+          <p>
+            {{offreDettails.region}}
+          </p>
+        </div>
+
+        <div class="right-form">
+          <span> Salaire :</span>
+          <p>
+            {{offreDettails.salaire}}
+          </p>
+        </div>
+
+      </div>
+
+      <div class="descreption-container">
+
+      </div>
+      <h1>Profil Recherché</h1>
+      <div class="postDisc-container">
+        <div class="left-form">
+          <span>Qualités interpersonnelles démandées :</span>
+          <p>
+            {{offreDettails.qualites_interpersonnelles}}
+          </p>
+        </div>
+        <div class="right-form">
+          <span>Diplome démandé :</span>
+          <p>
+            {{offreDettails.diplome_demande}}
+          </p>
+        </div>
+        <div class="right-form">
+          <span>Expérience démandée :</span>
+          <p>
+            {{offreDettails.experience_demandee}}
+          </p>
+        </div>
+      </div>
+
+      <div class="postDisc-container">
+        <div class="left-form">
+
+        <span>Compétences Techniques démandées :</span>
+        <p>
+          {{offreDettails.competences_techniques}}
+        </p>
+        </div>
+      </div>
+      <div class="buttons-container">
+        <button class="btn btn-primary next" (click)="openDialog(offreDettails.offreID)" >
+          Postuler
+          <mat-icon>near_me</mat-icon>
+        </button>
+      </div>
+    </div>
+  </div>
+
+
+  <app-footer></app-footer>
+</div>

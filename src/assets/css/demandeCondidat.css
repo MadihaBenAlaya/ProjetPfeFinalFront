@@ -1,0 +1,142 @@
+@media (max-width: 768px) {
+  .espaceCandidatWrapper .forms-container {
+    width: calc(840px * 0.75) !important;
+  }
+  .demandeCandidatWrapper {
+    max-width: 768px !important;
+    width: 768px !important;
+  }
+  .espaceCandidatWrapper
+    .forms-container
+    .form-container
+    .form-group
+    .form-control {
+    width: calc(267px * 0.75) !important;
+  }
+  nav {
+    max-width: 768px !important;
+    width: 778px;
+  }
+
+  .main-container
+    .register-container
+    .register-body
+    .register-button-area
+    .btn {
+    width: calc(377px * 0.75) !important;
+  }
+  .title-container h1 {
+    font: var(--unnamed-font-style-normal) normal 900 27px/43px
+      var(--unnamed-font-family-montserrat) !important;
+  }
+  .menu-list ul li a {
+    text-decoration: none;
+    font-family: "Montserrat", sans-serif;
+    font-style: normal;
+    font-size: 13px;
+  }
+  .footer-wrapper .newslettr-container .newslettr-body .row {
+    margin-left: 150px !important;
+  }
+  .navbar .logo img {
+    width: 100px !important;
+    height: 63px !important;
+    padding-bottom: 21px;
+  }
+  .menu-list ul li {
+    display: inline-block;
+    margin: 0px -5px 0px 5px !important;
+  }
+  .menu-list ul {
+    width: 501px !important;
+    padding-left: 10px !important;
+  }
+
+  .navbar .menu-list {
+    text-align: left !important;
+  }
+
+  .newslettr-container {
+    width: 768px !important;
+    height: calc(440px * 0.75) !important;
+  }
+
+  .footer-wrapper .sitemap-container {
+    width: 650px !important;
+  }
+  .navbar .login-button button {
+    position: absolute !important;
+    right: 10px !important;
+    top: 30px;
+  }
+  .footer-wrapper {
+    flex-wrap: wrap;
+    width: 768px;
+  }
+  .footer-wrapper .newslettr-container .form-group input[type="submit"] {
+    width: calc(242px * 0.75) !important;
+  }
+}
+.demandeCandidatWrapper .titel {
+  letter-spacing: var(--unnamed-character-spacing-0);
+  text-align: center;
+  font: normal normal bold 22px/28px Montserrat;
+  letter-spacing: 0px;
+  display: block;
+  color: #007abe;
+  text-align: center;
+  text-transform: uppercase;
+  opacity: 1;
+  margin: 60px 60px;
+}
+th,
+td,
+tr {
+  width: fit-content;
+  padding: 10px;
+}
+.demandeCandidatWrapper .tabel-conatiner {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 500px;
+}
+.demandeCandidatWrapper table th {
+  letter-spacing: var(--unnamed-character-spacing-0);
+  text-align: left;
+  font: normal normal medium 18px/24px "Montserrat";
+  letter-spacing: 0px;
+  padding: 10px;
+  color: #007abe;
+  border-bottom: 1px solid #dadce0;
+  opacity: 1;
+}
+.demandeCandidatWrapper table tr td {
+  letter-spacing: var(--unnamed-character-spacing-0);
+  text-align: left;
+  font: normal normal normal 14px/27px "Montserrat";
+  letter-spacing: 0px;
+  color: #64686d;
+  opacity: 1;
+}
+
+.demandeCandidatWrapper table tr td .statue {
+  font: var(--unnamed-font-style-normal) normal var(--unnamed-font-weight-600)
+    16px/25px Poppins;
+  letter-spacing: var(--unnamed-character-spacing-0);
+  text-align: center;
+  display: block;
+  font: normal normal 600 12px/25px "Montserrat";
+  letter-spacing: 0px;
+  width: calc(112px * 0.75);
+  height: calc(35px * 0.75);
+  color: #c78223;
+  background: #ffe9c1 0% 0% no-repeat padding-box;
+  opacity: 1;
+  margin: 10px;
+  opacity: 1;
+}
+.demandeCandidatWrapper table {
+  width: calc(1640px * 0.75);
+  border: 1px solid #dadce0;
+  border-radius: 4px;
+}

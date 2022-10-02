@@ -1,0 +1,134 @@
+@media (max-width: 768px) {
+  .register-wrapper {
+    width: 768px !important;
+    max-width: 768px !important;
+  }
+  .connection-body .connection-description p {
+    font: var(--unnamed-font-style-normal) normal normal -34px/34px var(--unnamed-font-family-montserrat) !important;
+  }
+  .register-container {
+    width: calc(488px * 0.75) !important;
+  }
+  .register-container .form-group {
+    font: normal normal 10px "Montserrat" !important;
+    width: calc(201px * 0.75) !important;
+  }
+  .connection-container {
+    width: 241px !important;
+  }
+  .main-container
+    .connection-container
+    .connection-body
+    .connection-button-area
+    .btn {
+    font: normal normal bold 17px/22px "Montserrat" !important;
+    width: calc(231px * 0.75) !important;
+    height: calc(58px * 0.75) !important;
+  }
+  .register-container .form-group .btn {
+    font: normal normal bold 18px/22px "Montserrat" !important;
+    width: 312px !important;
+    height: 44px !important;
+  }
+}
+
+@media (max-width: 425px) {
+}
+
+.register-container .register-body .form-group .form-control,
+.dropdown {
+  border-top: none;
+  border-right: none;
+  border-left: none;
+  border-radius: 0px;
+  border-color: #ccc;
+  box-shadow: none;
+}
+.register-container {
+  width: calc(975px * 0.75);
+  height: 335px;
+  margin: 15px calc(90px * 0.75) 0px calc(71px * 0.75);
+}
+.main-content-container .register-container .register-header {
+  font: var(--unnamed-font-style-normal) normal bold 18px/24px
+    var(--unnamed-font-family-montserrat);
+}
+.main-container {
+  width: 1230px;
+  height: 443px;
+  background-color: #ffffff;
+  margin: auto;
+  margin-bottom: 162px;
+}
+.main-content-container .connection-container .connection-header {
+  font: var(--unnamed-font-style-normal) normal bold 18px/24px
+    var(--unnamed-font-family-montserrat);
+}
+.title-container h1 {
+  color: #ffffff;
+  font: var(--unnamed-font-style-normal) normal 900 35px/43px
+    var(--unnamed-font-family-montserrat);
+}
+.title-container {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.register-container .form-group .btn {
+  font: normal normal bold 18px/22px "Montserrat";
+  width: 396px;
+  height: 45px;
+}
+.register-container .form-group {
+  font: normal normal bold 18px/22px "Montserrat";
+  width: calc(300px * 0.75);
+  height: 44.5px;
+  margin-right: calc(100px * 0.75);
+}
+.register-container .form-group input[type="submit"] {
+  margin-top: 70px;
+}
+.register-wrapper {
+  background-image: url("../images/Group\ 18281@2x.png");
+}
+.register-container .username,
+.register-container .password {
+  margin-top: calc(51px * 0.75);
+}
+
+.register-container .form-group .btn:hover {
+  background-color: var(--unnamed-color-0069b4);
+}
+.btn {
+  border-radius: 0px !important;
+}
+.btn-primary {
+  color: var(--unnamed-color-0069b4);
+}
+.connection-container {
+  width: 493px;
+  height: 280px;
+  margin-top: 15px;
+}
+.connection-body .connection-description p {
+  display: block;
+  height: 93px;
+
+  font: var(--unnamed-font-style-normal) normal normal 18px/34px
+    var(--unnamed-font-family-montserrat);
+}
+.register-container .register-body .form-body {
+  display: flex;
+}
+.main-container
+  .connection-container
+  .connection-body
+  .connection-button-area
+  .btn {
+  font: normal normal bold 18px/22px "Montserrat";
+  width: calc(293px * 0.75);
+  height: calc(60px * 0.75);
+}
+.main-container .main-content-container {
+  display: flex;
+}

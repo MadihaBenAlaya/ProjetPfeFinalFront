@@ -1,0 +1,41 @@
+<div class="espaceCandidatWrapper">
+  <div class="master-container">
+    <div class="titel-container">
+      <h3>Modifier département</h3>
+    </div>
+
+    <div class="forms-container row" *ngIf="departementDetails" >
+
+
+      <form class="row g-3" [formGroup]="service.formModel" autocomplete="off" (submit)="onSubmit()">
+        <div class="col-md-6">
+          <label for="inputEmail4" class="form-label">Code *</label>
+          <input type="text" [(ngModel)]="departementDetails.code" class="form-control" formControlName="code">
+          <label class="text-danger"
+          *ngIf="service.formModel.get('code').touched && service.formModel.get('code').errors?.required">
+          Ce champ est obligatoire.</label>
+        </div>
+        <div class="col-md-6">
+          <label for="inputEmail4" class="form-label">Libellé *</label>
+          <input type="text" [(ngModel)]="departementDetails.libelle" class="form-control" formControlName="libelle">
+          <label class="text-danger"
+          *ngIf="service.formModel.get('libelle').touched && service.formModel.get('libelle').errors?.required">
+          Ce champ est obligatoire.</label>
+
+        </div>
+
+
+        <div class="buttons-container">
+          <button type="submit" class="btn btn-primary next" [disabled]="!service.formModel.valid" mat-dialog-close>Enregistrer</button>
+          <button class="btn btn-primary cancel" mat-dialog-close>Annuler</button>
+        </div>
+
+
+      </form>
+
+    </div>
+
+  </div>
+
+
+</div>

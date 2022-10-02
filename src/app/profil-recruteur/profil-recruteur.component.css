@@ -1,0 +1,31 @@
+.text-info {
+  color: #3f51b5!important;
+}
+
+.bg-primary {
+  background-color: #3f51b5!important;
+}
+
+.image-upload>input {
+  display: none;
+}
+
+.text-secondary{
+  font-size: 1.10em;
+  color: black !important;
+
+}
+.mb-0{
+  color: #3f51b5;
+}
+
+
+mat-card {
+
+  text-transform: capitalize;
+  width: 1000px;
+}
+
+
+
+

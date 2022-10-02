@@ -1,0 +1,13 @@
+<div >
+  <div >
+    <button mat-raised-button color="primary" type="button" class="btn btn-primary" (click)="download()">Télécharger</button>
+  </div>
+  <div class="col-md-4">
+    <span class="download" *ngIf="progress > 0">
+      {{progress}}%
+    </span>
+    <span class="download">
+      {{message}}
+    </span>
+  </div>
+</div>

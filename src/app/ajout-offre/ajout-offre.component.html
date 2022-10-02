@@ -1,0 +1,140 @@
+<div class="espaceCandidatWrapper">
+  <div class="master-container">
+    <div class="titel-container">
+      <h3>Ajouter une offre</h3>
+    </div>
+
+    <div class="forms-container row">
+
+
+      <form class="row g-3" [formGroup]="service.formModel" autocomplete="off" (submit)="onSubmit()">
+        <div class="col-md-6">
+          <label for="inputEmail4" class="form-label">Titre du poste *</label>
+          <input type="email" class="form-control" formControlName="nomOffre">
+          <label class="text-danger"
+                *ngIf="service.formModel.get('nomOffre').touched && service.formModel.get('nomOffre').errors?.required">
+                Ce champ est obligatoire.</label>
+        </div>
+        <div class="col-md-3">
+          <label for="inputState" class="form-label">Département *</label>
+          <select id="inputState" class="form-select" formControlName="departement">
+            <option value="Departement" disabled selected style="display: none">
+              Département
+            </option>
+            <option>Développement Back End</option>
+            <option>Développement Front End</option>
+            <option>Développement mobile</option>
+            <option>Ressources humaines</option>
+            <option>DevOps</option>
+            <option>Test et Validation</option>
+            <option>Marketing & Sales</option>
+            <option>UX/Ui Design</option>
+            <option>Finance</option>
+            <option>Data</option>
+            <option>SysAdmin</option>
+            <option>Project Management</option>
+            <option>Quality Assurance</option>
+          </select>
+          <label class="text-danger"
+                *ngIf="service.formModel.get('departement').touched && service.formModel.get('departement').errors?.required">
+                Ce champ est obligatoire.</label>
+        </div>
+        <div class="col-md-3">
+          <label for="inputState" class="form-label">Contrat</label>
+          <select id="inputState" class="form-select" formControlName="type_contrat">
+            <option value="" disabled selected style="display: none">
+              Type de contrat
+            </option>
+            <option>CDI</option>
+            <option>CDD</option>
+          </select>
+        </div>
+        <div class="col-md-6">
+          <label for="inputZip" class="form-label">Competences techniques *</label>
+          <input type="text" class="form-control" formControlName="competences_techniques">
+          <label class="text-danger"
+                *ngIf="service.formModel.get('competences_techniques').touched && service.formModel.get('competences_techniques').errors?.required">
+                Ce champ est obligatoire.</label>
+        </div>
+
+        <div class="col-md-3">
+          <label for="inputState" class="form-label">Diplome *</label>
+          <select id="inputState" class="form-select" formControlName="diplome_demande">
+            <option value="" disabled selected style="display: none">
+              Diplome démandé
+            </option>
+            <option>Ingénieur</option>
+            <option>Technicien</option>
+          </select>
+          <label class="text-danger"
+                *ngIf="service.formModel.get('diplome_demande').touched && service.formModel.get('diplome_demande').errors?.required">
+                Ce champ est obligatoire.</label>
+        </div>
+        <div class="col-md-3">
+          <label for="inputEmail4" class="form-label">Experience demandée *</label>
+          <input type="number" class="form-control"  formControlName="experience_demandee">
+          <label class="text-danger"
+                *ngIf="service.formModel.get('experience_demandee').touched && service.formModel.get('experience_demandee').errors?.required">
+                Ce champ est obligatoire.</label>
+        </div>
+        <div class="col-6">
+          <label for="inputAddress2" class="form-label">Pays *</label>
+          <select id="inputState" class="form-select" formControlName="pays">
+            <option value="" disabled selected style="display: none">
+              Pays
+            </option>
+                  <option>Tunisie</option>
+                  <option>France</option>
+                  <option>Maroc</option>
+                  <option>Gabon</option>
+                  <option>RDC</option>
+          </select>
+          <label class="text-danger"
+          *ngIf="service.formModel.get('pays').touched && service.formModel.get('pays').errors?.required">
+          Ce champ est obligatoire.</label>
+        </div>
+        <div class="col-6">
+          <label for="inputAddress2" class="form-label">Région *</label>
+          <select id="inputState" class="form-select" formControlName="region">
+            <option value="" disabled selected style="display: none">
+              Pays
+            </option>
+            <option>Tunis</option>
+            <option>Tozeur</option>
+            <option>Paris</option>
+            <option>Casablanca</option>
+            <option>Libreville</option>
+            <option>Kinshasa</option>
+          </select>
+          <label class="text-danger"
+          *ngIf="service.formModel.get('region').touched && service.formModel.get('region').errors?.required">
+          Ce champ est obligatoire.</label>
+        </div>
+        <div class="col-md-6">
+          <label for="inputCity" class="form-label">Qualites interpersonnelles</label>
+          <input type="text" class="form-control" formControlName="qualites_interpersonnelles">
+        </div>
+        <div class="col-md-3">
+          <label for="inputCity" class="form-label">Salaire</label>
+          <input type="text" class="form-control" formControlName="salaire">
+        </div>
+        <div class="col-md-3">
+          <label for="inputCity" class="form-label">Date de début de travail</label>
+          <input type="date" class="form-control" placeholder="Date de début" formControlName="date_debut" />
+
+        </div>
+
+        <div class="buttons-container">
+          <button type="submit" class="btn btn-primary next" [disabled]="!service.formModel.valid" mat-dialog-close>Enregistrer</button>
+          <button class="btn btn-primary cancel" mat-dialog-close>Annuler</button>
+        </div>
+
+
+      </form>
+
+    </div>
+
+  </div>
+
+
+</div>

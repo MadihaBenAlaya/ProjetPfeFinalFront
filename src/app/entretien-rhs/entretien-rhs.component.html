@@ -1,0 +1,56 @@
+<div class="row cont">
+  <div class="col-md-9">
+    <div class="container">
+      <mat-card class="tCard">
+        <full-calendar [options]="calendarOptions"></full-calendar>
+      </mat-card>
+
+    </div>
+  </div>
+  <div class="col-md-3" style="margin-left: -100px;">
+    <div class="espaceCandidatWrapper">
+      <div class="master-container">
+        <div class="row g-0 text-center">
+          <div class="col-40 col-md-40">
+          <mat-card>
+            <h1>Entretien à venir</h1>
+            <div *ngFor="let rh of entretiensDetails">
+            <mat-card>
+              <div class="row">
+                <div class="col-md-2"><mat-icon>event</mat-icon></div>
+                <div class="col-md-10">
+                  <mat-card-header>
+
+                    <mat-card-title>{{rh.rendezVous.candidat.fullName}}</mat-card-title>
+                    <mat-card-subtitle><div class="row">
+
+
+                      <div class="col">{{rh.heure}}</div>
+                      <div class="col">{{rh.duree}}</div>
+                      <div class="row-2">{{rh.date}}</div>
+                    </div></mat-card-subtitle>
+                </mat-card-header>
+
+                </div>
+              </div>
+
+
+            </mat-card>
+          </div>
+
+          </mat-card>
+          </div>
+        </div>
+
+
+      </div>
+
+    </div>
+  </div>
+
+</div>
+
+
+
+
+

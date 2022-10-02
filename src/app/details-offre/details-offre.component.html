@@ -1,0 +1,60 @@
+
+
+<mat-card class="example-card" *ngIf="offreDettails">
+  <mat-card-title>{{offreDettails.nomOffre}}</mat-card-title>
+  <h2></h2>
+
+
+  <mat-card-content>
+    <div class="row">
+      <div class="col-6">
+        <h1>Description de l'offre</h1>
+        <h2>Departement:</h2>
+        <p>{{offreDettails.departement}}</p>
+        <h2>Type contrat:</h2>
+        <p>{{offreDettails.type_contrat}}</p>
+        <h2>Date debut:</h2>
+        <p>{{offreDettails.date_debut}}</p>
+        <h2>Pays:</h2>
+        <p>{{offreDettails.pays}}</p>
+        <h2>Region:</h2>
+        <p>{{offreDettails.region}}</p>
+        <h2>Salaire:</h2>
+        <p>{{offreDettails.salaire}}</p>
+        <p></p>
+      </div>
+
+      <div class="col-6">
+
+        <h1>Profil Recherché</h1>
+
+
+        <h2>Qualités interpersonnelles démandées :</h2>
+        <p>
+          {{offreDettails.qualites_interpersonnelles}}
+        </p>
+
+
+        <h2>Diplome démandé :</h2>
+        <p>
+          {{offreDettails.diplome_demande}}
+        </p>
+
+
+        <h2>Expérience démandée :</h2>
+        <p>
+          {{offreDettails.experience_demandee}}
+        </p>
+
+
+
+
+        <h2>Compétences Techniques démandées :</h2>
+        <p>
+          {{offreDettails.competences_techniques}}
+        </p>
+      </div>
+    </div>
+  </mat-card-content>
+
+</mat-card>

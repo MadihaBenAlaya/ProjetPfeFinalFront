@@ -1,0 +1,324 @@
+@media (max-width: 768px) {
+  .espaceCandidatWrapper .forms-container {
+    width: calc(840px * 0.75) !important;
+  }
+  .demandeCandidatWrapper {
+    max-width: 768px !important;
+    width: 768px !important;
+  }
+  .postsListsWrapper .filter-container .filter-row .label {
+    display: none;
+  }
+  body
+    > div
+    > div.post-center-container
+    > div
+    > div.postsList-list-container
+    > div
+    > div.postsList-card {
+    width: calc(897px * 0.75) !important;
+  }
+  .paginations {
+    margin-left: 638px !important;
+  }
+  .postsListsWrapper .filter-container {
+    max-width: 768px !important;
+  }
+  body
+    > div
+    > div.post-center-container
+    > div
+    > div.postsList-list-container
+    > div
+    > div
+    > div
+    > div.col-sm-2.offset-sm-1
+    > div
+    > div.apply
+    > button {
+    width: calc(121px * 0.75) !important;
+
+    font-size: 13px !important;
+
+    margin-top: 0px !important;
+  }
+  .row {
+    justify-content: center !important;
+  }
+  .espaceCandidatWrapper
+    .forms-container
+    .form-container
+    .form-group
+    .form-control {
+    width: calc(267px * 0.75) !important;
+  }
+  nav {
+    max-width: 768px !important;
+    width: 778px;
+  }
+
+  .main-container
+    .register-container
+    .register-body
+    .register-button-area
+    .btn {
+    width: calc(377px * 0.75) !important;
+  }
+  .title-container h1 {
+    font: var(--unnamed-font-style-normal) normal 900 27px/43px
+      var(--unnamed-font-family-montserrat) !important;
+  }
+  .menu-list ul li a {
+    text-decoration: none;
+    font-family: "Montserrat", sans-serif;
+    font-style: normal;
+    font-size: 13px;
+  }
+  .footer-wrapper .newslettr-container .newslettr-body .row {
+    margin-left: 150px !important;
+  }
+  .navbar .logo img {
+    width: 100px !important;
+    height: 63px !important;
+    padding-bottom: 21px;
+  }
+  .menu-list ul li {
+    display: inline-block;
+    margin: 0px -5px 0px 5px !important;
+  }
+  .menu-list ul {
+    width: 501px !important;
+    padding-left: 10px !important;
+  }
+
+  .navbar .menu-list {
+    text-align: left !important;
+  }
+
+  .newslettr-container {
+    width: 768px !important;
+    height: calc(440px * 0.75) !important;
+  }
+
+  .footer-wrapper .sitemap-container {
+    width: 650px !important;
+  }
+  .navbar .login-button button {
+    position: absolute !important;
+    right: 10px !important;
+    top: 30px;
+  }
+  .footer-wrapper {
+    flex-wrap: wrap;
+    width: 768px;
+  }
+  .footer-wrapper .newslettr-container .form-group input[type="submit"] {
+    width: calc(242px * 0.75) !important;
+  }
+}
+.postsListsWrapper .postsList-container {
+  width: calc(1173px * 0.75);
+  height: calc(877px * 0.75);
+  display: flex;
+  margin-top: 50px;
+  flex-direction: column;
+  align-items: center;
+}
+.postsList-card .row .col-sm-1 .icon-box {
+  margin-top: 10px;
+  background-color: #b2e3f8;
+  height: calc(80px * 0.75);
+  width: calc(80px * 0.75);
+  border-radius: 4px;
+  text-align: center;
+  padding-top: 20px;
+}
+.postsList-card .row .col-sm-1 .icon-box {
+  margin-top: 10px;
+  background-color: #b2e3f8;
+  height: calc(80px * 0.75);
+  width: calc(80px * 0.75);
+  border-radius: 4px;
+  text-align: center;
+  padding-top: 20px;
+}
+.postsList-card .row .col-sm-4 .postsList-name ul,
+.postsList-card .row .col-sm-4 .postsList-requirment ul {
+  list-style: none;
+}
+.postsList-card .row .col-sm-4 .postsList-buttons {
+  padding-right: 30px;
+}
+.postsList-card .row .col-sm-2 .postsList-buttons .apply .btn {
+  width: calc(160px * 0.75);
+  height: calc(60px * 0.75);
+  background-color: #0069b4;
+  border-radius: 4px;
+  color: white;
+  font-size: 16px;
+  font-weight: 600;
+  padding: 10px;
+  border: 0;
+  margin-top: 10px;
+}
+.postsList-card.row .col-sm-2 .postsList-buttons .apply button i {
+  margin-left: 5px;
+  margin-top: 2px;
+}
+.postsList-card .row .col-sm-2 .postsList-buttons .show-more span a {
+  letter-spacing: var(--unnamed-character-spacing-0);
+  color: var(--unnamed-color-0069b4);
+  text-align: left;
+  font: normal normal bold 12px/18px "Montserrat";
+  letter-spacing: 0px;
+  color: #0069b4;
+  text-transform: capitalize;
+  opacity: 1;
+}
+.postsList-card .row .col-sm-2 .postsList-buttons .show-more {
+  margin-bottom: 25px;
+}
+.postsList-card .row .col-sm-2 .apply .show-more {
+  margin-top: 15px;
+}
+.postsList-card .row .col-sm-4 .postsList-name ul .titel,
+.postsList-card .row .col-sm-4 .postsList-requirment ul .titel {
+  letter-spacing: var(--unnamed-character-spacing-0);
+  color: var(--unnamed-color-000000);
+  text-align: left;
+  font: normal normal bold 16px/22px "Montserrat";
+  letter-spacing: 0px;
+  color: #000000;
+  text-transform: capitalize;
+  opacity: 1;
+}
+.postsList-card .row .col-sm-4 .postsList-name ul .available {
+  letter-spacing: var(--unnamed-character-spacing-0);
+  text-align: left;
+  font: normal normal bold 14px/22px Montserrat;
+  letter-spacing: 0px;
+  color: #11b276;
+  text-transform: capitalize;
+  opacity: 1;
+}
+.postsList-card .row .col-sm-4 .postsList-requirment ul .delay {
+  letter-spacing: var(--unnamed-character-spacing-0);
+  text-align: left;
+  font: normal normal bold 14px/22px Montserrat;
+  letter-spacing: 0px;
+  color: var(--unnamed-color-0069b4);
+  text-transform: capitalize;
+  opacity: 1;
+}
+.postsList-card .row .col-sm-4 .postsList-requirment ul li {
+  text-align: left;
+}
+.postsList-container .postsList-list-container .postsList-row .postsList-card {
+  background-color: white;
+  height: calc(200px * 0.75);
+  width: calc(1597px * 0.75);
+  border: 1px solid #55555533;
+  margin-top: 30px;
+}
+.postsListsWrapper .post-center-container {
+  text-align: center;
+  display: flex;
+  justify-content: center;
+}
+.postsList-container
+  .postsList-list-container
+  .postsList-row
+  .postsList-card-body {
+  margin-top: 30px;
+}
+.postsListsWrapper .postsList-container .title-container span {
+  letter-spacing: var(--unnamed-character-spacing-0);
+  text-align: center;
+  font: normal normal bold 18px/28px "Montserrat";
+  letter-spacing: 0px;
+  color: #007abe;
+  text-transform: uppercase;
+  opacity: 1;
+}
+.postsListsWrapper .postsList-container {
+  width: calc(1173px * 0.75);
+  height: fit-content;
+  display: flex;
+  margin-top: 50px;
+  flex-direction: column;
+  align-items: center;
+}
+.postsListsWrapper .postsList-container .pagination .page-item {
+  margin: 10px 10px 0px 0px;
+  border-radius: 0px;
+  border: 2px solid #0069b4;
+}
+.postsListsWrapper .filter-container {
+  height: calc(120px * 0.75);
+  background: #f2f2f2 0% 0% no-repeat padding-box;
+  opacity: 1;
+  width: 100%;
+}
+.postsListsWrapper .filter-container .filter-row .label {
+  width: fit-content;
+  padding-top: 5px;
+  letter-spacing: var(--unnamed-character-spacing-0);
+  color: var(--unnamed-color-000000);
+  text-align: left;
+  font: normal normal medium 20px/54px Montserrat;
+  letter-spacing: 0px;
+  color: #000000;
+  text-transform: capitalize;
+  opacity: 1;
+}
+.postsListsWrapper .filter-container .filter-row .label label {
+  letter-spacing: var(--unnamed-character-spacing-0);
+  color: var(--unnamed-color-000000);
+  text-align: left;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  font-family: "Montserrat";
+  letter-spacing: 0px;
+  color: #000000;
+  text-transform: capitalize;
+  opacity: 1;
+}
+.postsListsWrapper
+  .filter-container
+  .filter-row
+  .col-sm-2
+  .form-group
+  .form-control {
+  width: calc(222px * 0.75);
+  height: calc(45px * 0.75);
+  -webkit-appearance: menulist;
+  border-radius: 0px;
+  letter-spacing: var(--unnamed-character-spacing-0);
+  color: var(--unnamed-color-000000);
+  text-align: left;
+  font: normal normal normal 13px/20px "Montserrat";
+  letter-spacing: 0px;
+  color: #000000;
+  text-transform: capitalize;
+  opacity: 0.5;
+}
+.postsListsWrapper .filter-container {
+  padding-top: calc(40px * 0.75);
+}
+.postsListsWrapper .filter-container .filter-row .col-sm-2 .form-group .btn {
+  background: var(--unnamed-color-0069b4) 0% 0% no-repeat padding-box;
+  background: #0069b4 0% 0% no-repeat padding-box;
+  opacity: 1;
+  border: 0px;
+  text-align: center;
+  letter-spacing: var(--unnamed-character-spacing-0);
+  text-align: center;
+  font: normal normal medium 20px/54px Montserrat;
+  letter-spacing: 0px;
+  color: #ffffff;
+  text-transform: capitalize;
+  opacity: 1;
+  width: calc(191px * 0.75);
+  height: calc(50px * 0.75);
+}

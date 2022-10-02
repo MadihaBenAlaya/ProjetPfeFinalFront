@@ -1,0 +1,439 @@
+.profilePictureWrapper .master-container {
+  width: 100%;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+@media (max-width: 768px) {
+  .profilePictureWrapper {
+    width: 768px !important;
+  }
+  .profilePictureWrapper .forms-container {
+    width: calc(878px * 0.75);
+  }
+  .profilePictureWrapper .forms-container {
+    width: calc(978px * 0.75) !important;
+  }
+  .demandeCandidatWrapper {
+    max-width: 768px !important;
+    width: 768px !important;
+  }
+  .postsListsWrapper .filter-container .filter-row .label {
+    display: none;
+  }
+  body
+    > div
+    > div.post-center-container
+    > div
+    > div.postsList-list-container
+    > div
+    > div.postsList-card {
+    width: calc(897px * 0.75) !important;
+  }
+  .paginations {
+    margin-left: 638px !important;
+  }
+  .postsListsWrapper .filter-container {
+    max-width: 768px !important;
+  }
+  body
+    > div
+    > div.post-center-container
+    > div
+    > div.postsList-list-container
+    > div
+    > div
+    > div
+    > div.col-sm-2.offset-sm-1
+    > div
+    > div.apply
+    > button {
+    width: calc(121px * 0.75) !important;
+
+    font-size: 13px !important;
+
+    margin-top: 0px !important;
+  }
+  .row {
+    justify-content: center !important;
+  }
+  .profilePictureWrapper
+    .forms-container
+    .form-container
+    .form-group
+    .form-control {
+    width: calc(267px * 0.75) !important;
+  }
+  nav {
+    max-width: 768px !important;
+    width: 778px;
+  }
+
+  .main-container
+    .register-container
+    .register-body
+    .register-button-area
+    .btn {
+    width: calc(377px * 0.75) !important;
+  }
+  .title-container h1 {
+    font: var(--unnamed-font-style-normal) normal 900 27px/43px
+      var(--unnamed-font-family-montserrat) !important;
+  }
+  .menu-list ul li a {
+    text-decoration: none;
+    font-family: "Montserrat", sans-serif;
+    font-style: normal;
+    font-size: 13px;
+  }
+  .footer-wrapper .newslettr-container .newslettr-body .row {
+    margin-left: 150px !important;
+  }
+  .navbar .logo img {
+    width: 100px !important;
+    height: 63px !important;
+    padding-bottom: 21px;
+  }
+  .menu-list ul li {
+    display: inline-block;
+    margin: 0px -5px 0px 5px !important;
+  }
+  .menu-list ul {
+    width: 501px !important;
+    padding-left: 10px !important;
+  }
+
+  .navbar .menu-list {
+    text-align: left !important;
+  }
+
+  .newslettr-container {
+    width: 768px !important;
+    height: calc(440px * 0.75) !important;
+  }
+
+  .footer-wrapper .sitemap-container {
+    width: 650px !important;
+  }
+  .navbar .login-button button {
+    position: absolute !important;
+    right: 10px !important;
+    top: 30px;
+  }
+  .footer-wrapper {
+    flex-wrap: wrap;
+    width: 768px;
+  }
+  .footer-wrapper .newslettr-container .form-group input[type="submit"] {
+    width: calc(242px * 0.75) !important;
+  }
+}
+/* .profilePictureWrapper .master-container .form-container {
+  display: flex;
+} */
+.profilePictureWrapper {
+  margin-right: auto; /* 1 */
+  margin-left: auto; /* 1 */
+  max-width: 1920px;
+}
+.master-container > .forms-container.row > .form-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.profilePictureWrapper .forms-container .profile-picture-container {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  margin-top: calc(60px * 0.75);
+}
+.profilePictureWrapper
+  .forms-container
+  .profile-picture-container
+  .image-container
+  .profile-pic {
+  width: calc(120px * 0.75);
+  height: calc(120px * 0.75);
+  border-radius: 50%;
+  margin-bottom: calc(30px * 0.75);
+}
+.profilePictureWrapper
+  .forms-container
+  .profile-picture-container
+  .update-button
+  .btn-update {
+  width: 303px;
+  height: 40px;
+  background: #f9f9f9 0% 0% no-repeat padding-box;
+  font: var(--unnamed-font-style-normal) normal bold 22px/44px
+    var(--unnamed-font-family-montserrat);
+  letter-spacing: var(--unnamed-character-spacing-0);
+  color: var(--unnamed-color-000000);
+  border: none;
+  margin-bottom: calc(69px * 0.75);
+  text-align: center;
+  font: normal normal bold 16px/22px Montserrat;
+  letter-spacing: 0px;
+  color: #000000;
+
+  opacity: 1;
+}
+.profilePictureWrapper .forms-container {
+  border: 1px solid #ccc;
+  width: calc(1640px * 0.75);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-bottom: 100px;
+}
+.profilePictureWrapper
+  .forms-container
+  .form-container
+  .form-group
+  .form-control {
+  border-top: none;
+  border-right: none;
+  border-left: none;
+  border-radius: 0px;
+  border-color: #ccc;
+  box-shadow: none;
+  width: calc(491px * 0.75);
+  font: normal normal medium 18px/22px "Montserrat";
+  letter-spacing: 0px;
+  color: #000000;
+  opacity: 1;
+}
+.profilePictureWrapper
+  .forms-container
+  .form-container
+  .left-form
+  .form-group
+  .form-control
+  .file-upload {
+  border-top: none;
+  border-right: none;
+  border-left: none;
+  border-radius: 0px;
+  border-color: #ccc;
+  box-shadow: none;
+  width: calc(481px * 0.75);
+  font: normal normal medium 18px/22px "Montserrat";
+  letter-spacing: 0px;
+
+  opacity: 1;
+
+  display: none;
+  user-select: none;
+}
+.profilePictureWrapper .forms-container .form-container .middel-form {
+  display: flex;
+
+  flex-wrap: wrap;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-left: 50px;
+}
+.profilePictureWrapper
+  .forms-container
+  .form-container
+  .middel-form
+  .form-group
+  .form-control {
+  width: calc(1220px * 0.75);
+}
+div.master-container
+  > div.forms-container.row
+  > div.form-container
+  > div.left-form
+  > div:nth-child(1)
+  > div.input-group
+  > input::-webkit-file-upload-button {
+  float: right;
+  display: none;
+  user-select: none;
+}
+
+#basic-addon2 {
+  background-color: transparent;
+  border-top: none;
+  border-right: none;
+  border-left: none;
+  border-radius: 0px;
+  border-color: #ccc;
+}
+.profilePictureWrapper
+  .forms-container
+  .form-container
+  .right-form
+  .form-group
+  .form-control
+  .file-upload {
+  border-top: none;
+  border-right: none;
+  border-left: none;
+  border-radius: 0px;
+  border-color: #ccc;
+  box-shadow: none;
+  width: calc(491px * 0.75);
+  font: normal normal medium 18px/22px "Montserrat";
+  letter-spacing: 0px;
+
+  opacity: 1;
+
+  display: none;
+  user-select: none;
+}
+
+div.master-container
+  > div.forms-container.row
+  > div.form-container
+  > div.right-form
+  > div:nth-child(1)
+  > div.input-group
+  > input::-webkit-file-upload-button {
+  float: right;
+  display: none;
+  user-select: none;
+}
+
+#basic-addon3 {
+  background-color: transparent;
+  border-top: none;
+  border-right: none;
+  border-left: none;
+  border-radius: 0px;
+  border-color: #ccc;
+}
+.profilePictureWrapper .forms-container .form-container .form-group {
+  margin-bottom: calc(60.5px * 0.75);
+}
+.profilePictureWrapper .master-container .titel-container h3 {
+  text-align: center;
+  letter-spacing: var(--unnamed-character-spacing-0);
+  text-align: center;
+  font: normal normal bold 28px/38px "Montserrat";
+  letter-spacing: 0px;
+  color: #007abe;
+  text-transform: uppercase;
+  opacity: 1;
+}
+.profilePictureWrapper .master-container .titel-container {
+  margin-top: calc(80px * 0.75);
+  margin-bottom: calc(60px * 0.75);
+}
+
+.profilePictureWrapper .master-container .forms-container .form-title h6 {
+  margin-bottom: calc(51px * 0.75);
+  margin-left: 50px;
+  letter-spacing: var(--unnamed-character-spacing-0);
+  color: var(--unnamed-color-000000);
+  text-align: left;
+  font: normal normal bold 18px/24px "Montserrat";
+  margin-top: calc(52px * 0.75);
+  letter-spacing: 0px;
+  color: #000000;
+  text-transform: uppercase;
+  opacity: 1;
+}
+.profilePictureWrapper .master-container .forms-container .buttons-container {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 40px;
+}
+
+.profilePictureWrapper
+  .master-container
+  .forms-container
+  .buttons-container
+  .next {
+  background: #007abe 0% 0% no-repeat padding-box;
+  box-shadow: 1px 2px 10px #0000004d;
+  opacity: 1;
+  width: calc(260px * 0.75);
+  height: calc(60px * 0.75);
+  margin-right: calc(40px * 0.75);
+  letter-spacing: var(--unnamed-character-spacing-0);
+  text-align: center;
+  font: normal normal medium 18px/22px "Montserrat";
+  letter-spacing: 0px;
+  color: #ffffff;
+  text-transform: capitalize;
+  opacity: 1;
+}
+.profilePictureWrapper
+  .master-container
+  .forms-container
+  .buttons-container
+  .cancel {
+  background: #ffffff 0% 0% no-repeat padding-box;
+
+  width: calc(260px * 0.75);
+  height: calc(60px * 0.75);
+  letter-spacing: var(--unnamed-character-spacing-0);
+  text-align: center;
+  font: normal normal medium 18px/22px "Montserrat";
+  color: #353535;
+  text-transform: capitalize;
+  border: 0px;
+}
+.profilePictureWrapper .forms-container .form-container .left-form {
+  margin-right: calc(150px * 0.75);
+  margin-left: 50px;
+}
+
+.bootstrap-select > .dropdown-toggle.bs-placeholder,
+.bootstrap-select > .dropdown-toggle.bs-placeholder:hover,
+.bootstrap-select > .dropdown-toggle.bs-placeholder:focus,
+.bootstrap-select > .dropdown-toggle.bs-placeholder:active {
+  color: rgb(149 133 133);
+  background-color: white;
+  border-bottom: 1px solid #ccc;
+}
+.btn-light:not(:disabled):not(.disabled).active,
+.btn-light:not(:disabled):not(.disabled):active,
+.show > .btn-light.dropdown-toggle {
+  color: #ccc;
+
+  background-color: white;
+  border-bottom: 1px solid #ccc;
+}
+
+.btn-check:active + .btn-light,
+.btn-check:checked + .btn-light,
+.btn-light.active,
+.btn-light:active,
+.show > .btn-light.dropdown-toggle {
+  color: #000 !important;
+  background-color: white !important;
+  border-bottom: 1px solid #ccc !important;
+}
+.btn-light {
+  color: rgb(165, 155, 155) !important;
+  background-color: white !important;
+  border-bottom: 1px solid #ccc !important;
+}
+.profilePictureWrapper .forms-container .form-container .form-group select {
+  -webkit-appearance: button;
+  -moz-appearance: button;
+
+  text-indent: 1px;
+  text-overflow: "";
+}
+
+/* width */
+select::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+select::-webkit-scrollbar-track {
+  background: #ffffff;
+}
+
+/* Handle */
+select::-webkit-scrollbar-thumb {
+  background: rgb(20, 88, 145);
+}
+
+/* Handle on hover */

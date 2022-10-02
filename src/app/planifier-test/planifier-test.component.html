@@ -1,0 +1,78 @@
+<div class="espaceCandidatWrapper">
+
+
+  <div class="master-container">
+    <div class="titel-container">
+      <h3>Planifier un test technique</h3>
+    </div>
+
+      <div class="row g-0 text-center">
+
+          <mat-card>
+          <div >
+
+      <form [formGroup]="service.formModel" autocomplete="off" (submit)="onSubmit(candidature.candidat.email,candidature.candidat.fullName)">
+      <div class="container">
+        <div class="row g-2">
+
+          <div class="col-6">
+            <label for="inputAddress2" class="form-label">Date de dépot *</label>
+              <input
+                type="date"
+                class="form-control"
+                placeholder="Date de dépot"
+                formControlName="date_depot"
+              />
+              <label class="text-danger"
+                      *ngIf="service.formModel.get('date_depot').touched && service.formModel.get('date_depot').errors?.required">
+                      Ce champ est obligatoire.</label>
+          </div>
+
+          <div class="col-6">
+            <label for="inputAddress2" class="form-label">Durée *</label>
+            <select id="inputState" class="form-select" formControlName="duree">
+
+                    <option value="" disabled selected style="display: none">
+                      Durée
+                    </option>
+
+                    <option>15 min</option>
+                    <option>20 min</option>
+                    <option>30 min</option>
+                    <option>40 min</option>
+
+                  </select>
+                  <label class="text-danger"
+                      *ngIf="service.formModel.get('duree').touched && service.formModel.get('duree').errors?.required">
+                      Ce champ est obligatoire.</label>
+
+          </div>
+
+          <div class="col-12">
+            <label for="inputAddress2" class="form-label">Lien du test *</label>
+              <input type="text" class="form-control" placeholder="Lien du test" formControlName="lien_test" />
+              <label class="text-danger"
+                      *ngIf="service.formModel.get('lien_test').touched && service.formModel.get('lien_test').errors?.required">
+                      Ce champ est obligatoire.</label>
+          </div>
+
+
+
+        </div>
+        <br>
+      <div class="buttons-container">
+        <button mat-raised-button color="primary" >Valider</button>
+        <button mat-raised-button mat-dialog-close>Annuler</button>
+
+      </div>
+
+    </div>
+      </form>
+  </div>
+  </mat-card>
+
+
+  </div>
+  </div>
+  </div>
+
