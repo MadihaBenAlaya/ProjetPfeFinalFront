@@ -42,7 +42,7 @@ export class LoginComponent implements OnInit {
 
       },
       err=>{
-        this.snackBar.open("wrong password", "try again");
+        this.snackBar.open("Mot de passe incorrect", "Réessayer");
       }
 
     );

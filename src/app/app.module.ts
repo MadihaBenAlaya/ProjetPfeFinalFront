@@ -85,6 +85,9 @@ import { ConfirmDeleteComponent } from './confirm-delete/confirm-delete.componen
 import { ConfirmDeleteOffreComponent } from './confirm-delete-offre/confirm-delete-offre.component';
 import { ConfirmDeleteDepComponent } from './confirm-delete-dep/confirm-delete-dep.component';
 import { ConfirmDeletePersonnelComponent } from './confirm-delete-personnel/confirm-delete-personnel.component';
+import { SecteursComponent } from './secteurs/secteurs.component';
+import { BlogComponent } from './blog/blog.component';
+import { ContactComponent } from './contact/contact.component';
 
 FullCalendarModule.registerPlugins([ // register FullCalendar plugins
   dayGridPlugin,
@@ -155,6 +158,9 @@ FullCalendarModule.registerPlugins([ // register FullCalendar plugins
     ConfirmDeleteOffreComponent,
     ConfirmDeleteDepComponent,
     ConfirmDeletePersonnelComponent,
+    SecteursComponent,
+    BlogComponent,
+    ContactComponent,
 
   ],
   imports: [

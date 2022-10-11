@@ -23,7 +23,7 @@ export class DownloadComponent implements OnInit {
             if (event.type === HttpEventType.UploadProgress)
                 this.progress = Math.round((100 * event.loaded) / event.total);
             else if (event.type === HttpEventType.Response) {
-                this.message = 'Download success.';
+                this.message = 'Download avec succès.';
                 this.downloadFile(event);
             }
         });

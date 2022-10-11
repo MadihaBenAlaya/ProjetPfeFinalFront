@@ -35,14 +35,18 @@ import { AjoutDepartementComponent } from './ajout-departement/ajout-departement
 import { DetailsCandidatureComponent } from './details-candidature/details-candidature.component';
 import { RecruteursComponent } from './recruteurs/recruteurs.component';
 import { AjoutRecruteurComponent } from './ajout-recruteur/ajout-recruteur.component';
-
+import { SecteursComponent } from './secteurs/secteurs.component';
+import { BlogComponent } from './blog/blog.component';
+import { ContactComponent } from './contact/contact.component';
 
 const routes: Routes = [
 { path : '', component : PageAccueilComponent },
 { path : 'Register', component : RegisterComponent },
 { path : 'Login', component : LoginComponent},
 { path : 'FichePoste/:id', component : FichePosteComponent },
-
+{ path : 'Secteurs', component : SecteursComponent },
+{ path : 'Blog', component : BlogComponent },
+{ path : 'Contact', component : ContactComponent },
 //{ path : 'PostesPage', component : PostesPageComponent},
 { path : 'EspaceCondidat', component : EspaceCondidatComponent ,canActivate:[AuthGuard],data :{permittedRoles:['CANDIDAT']}},
 { path : 'DemandesCondidat', component : DemandesCondidatComponent,canActivate:[AuthGuard],data :{permittedRoles:['CANDIDAT']} },
